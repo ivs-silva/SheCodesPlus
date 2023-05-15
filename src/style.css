@@ -1,0 +1,89 @@
+h1 {
+  color: #20016d;
+  font-family: "Xanh Mono", monospace;
+  font-size: 37px;
+  text-align: right;
+}
+
+h2 {
+  color: #20016d;
+  font-family: "Xanh Mono", monospace;
+  font-size: 35px;
+  text-align: left;
+}
+
+p {
+  color: black;
+  font-family: "Xanh Mono", monospace;
+  font-size: 15px;
+  text-align: left;
+}
+
+img {
+  width: 50px;
+  display: block;
+  margin: auto;
+}
+
+.currentdaytemperature {
+  color: #20016d;
+  font-family: "Xanh Mono", monospace;
+  font-size: 35px;
+  text-align: center;
+}
+.imageheader {
+  width: 90px;
+  display: block;
+  margin: auto;
+}
+.firstcontainer {
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(239, 246, 249) 0%,
+    rgb(206, 239, 253) 90%
+  );
+  font-family: "Playfair Display", monospace;
+}
+.backgroundcontainer {
+  font-family: "Playfair Display", monospace;
+}
+.card,
+.itemgroup {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(239, 246, 249) 0%,
+    rgb(206, 239, 253) 90%
+  );
+  font-family: "Playfair Display", serif;
+}
+
+.backgroundcolorcontainer {
+  background-color: transparent;
+  text-align: center;
+}
+
+.daytemperature {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 25px;
+  background-color: transparent;
+}
+.daydate {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.daywind {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  background-color: transparent;
+}
+
+.dayprecipitation {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  background-color: transparent;
+}
