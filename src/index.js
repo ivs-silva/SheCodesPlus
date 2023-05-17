@@ -1,28 +1,20 @@
 let currentTime = new Date();
 function formatDate(date) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Saturday"];
 
   let months = [
-    "January",
-    "February",
+    "Jan",
+    "Feb",
     "March",
     "April",
     "May",
     "June",
     "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   let currentYear = date.getFullYear();
@@ -35,7 +27,7 @@ function formatDate(date) {
     currentMinute = `0${currentMinute}`;
   }
 
-  let formattedDate = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear} - ${currentHour}h${currentMinute}`;
+  let formattedDate = `${currentDay}. ${currentDate} ${currentMonth}.${currentYear} - ${currentHour}h${currentMinute}`;
 
   return formattedDate;
 }
