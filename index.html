@@ -12,102 +12,76 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Playfair+Display:wght@400;500;600&family=Xanh+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" class="css" />
   </head>
 
   <body>
-    <div class="container border border-dark">
-      <div class="container-sm border border-dark">
-      City Name
+    <div class="container maincontainer">
+      <div class="container-sm cityname" id="display-current-city">
+        City Name
       </div>
-    
-<div class="row">
-        <div class="col-4">
+
+      <div class="row">
+        <div class="col-6 containerright">
           <ul class="list-group">
-            <li class="list-group-item">Temperature <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">F</a></li>
-            <li class="list-group-item">Precipitation</li>
-            <li class="list-group-item">Humidity</li>
-            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">
+              <img class="imagesize" id="icon" src="images/sun.png" alt="" />
+            </li>
+            <li
+              class="list-group-item leftstyledescription"
+              id="current-humidity"
+            >
+              Humidity
+            </li>
+            <li
+              class="list-group-item leftstyledescription"
+              id="current-wind-speed"
+            >
+              Wind
+            </li>
           </ul>
-          </div>
-        <div class="col-8">
+        </div>
+        <div class="col-6 containerleft">
           <ul class="list-group">
-            <li class="list-group-item">Weather</li>
-            <li class="list-group-item" id="current-date">Date and hour</li>
-            <li class="list-group-item">Current precipitation</li>
-          </ul></div>
-      </div>
-     
-      </div>
-    </div>
-
-
-  </body>
-
-
-
-
-
-
-    /*
-
-    <div
-      class="container border border-dark subtle border-opacity-50 border-2 mt-5 backgroundcontainer"
-    >
-      <div
-        class="container-sm text-center border border-dark subtle border-opacity-25 border-1 mt-3 firstcontainer"
-      >
-        <div class="row">
-          <div class="col-6">
-            <h1 id="current-date">Today</h1>
-            <div>
-              <h2 class="currentdaytemperature" id="temperature">
-                19<span class="currentdaytemperature">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">F</a>
-                </span>
-              </h2>
-            </div>
-          </div>
-          <div class="col-2">
-            <img class="imageheader" src="images/sun.png" alt="" />
-          </div>
-
-          <div class="col-4">
-            <h2 id="current-city">Vienna</h2>
-            <div class="row">
-              <p>Precipitation:0%</p>
-            </div>
-            <div>
-              <p>Wind:20km/h</p>
-            </div>
-          </div>
+            <li class="list-group-item standardstyleright">Weather</li>
+            <li class="list-group-item standardstyleright" id="current-date">
+              Date and hour
+            </li>
+            <li
+              class="list-group-item rightstyledescription"
+              id="current-precipitation"
+            >
+              Current precipitation
+            </li>
+            <li class="list-group-item standardstyleright">
+              <span id="temperature" class="currenttemperaturestyle"></span>
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">F</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="row mt-2 ms-5 me-5">
+
+      <div class="row searchcontainer">
         <div class="col">
           <form id="form-city" class="d-flex" role="search">
             <input
               id="city-input"
-              class="form-control me-2"
+              class="form-control me-2 styleformbutton"
               type="search"
               placeholder="Enter your city"
               aria-label="Search"
             />
             <button
               id="search-button"
-              class="btn btn-primary position-relative botton-40 end-20"
+              class="btn btn-primary styleformbutton"
               type="submit"
             >
               Search
@@ -115,98 +89,64 @@
           </form>
         </div>
       </div>
-
-      <div class="card-group mt-2 mb-3">
+      <div class="card-group cardstyle">
         <div class="card" style="width: 18rem">
-          <div class="card-body itemgroup">
-            <h5 class="card-title daytemperature">19°</h5>
-            <div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item cardstyle">
               <img src="images/cloudy.png" alt="" />
-            </div>
-            <p class="card-text daydate">Tomorrow</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item backgroundcolorcontainer">Sky clear</li>
-            <li class="list-group-item dayprecipitation">
-              ☔ Precipitation: 1%
+              <div>temperature</div>
+              <div>date</div>
             </li>
-            <li class="list-group-item daywind">🍃 Wind: 14km/h</li>
+            <li class="list-group-item cardstyle">A second item</li>
+            <li class="list-group-item cardstyle">A third item</li>
           </ul>
         </div>
         <div class="card" style="width: 18rem">
-          <div class="card-body itemgroup">
-            <h5 class="card-title daytemperature">19</h5>
-            <div>
-              <img src="images/sun.png" alt="" />
-            </div>
-            <p class="card-text daydate">Date</p>
-          </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item backgroundcolorcontainer">
-              No clouds in the sky
+            <li class="list-group-item cardstyle">
+              <img src="images/cloudy.png" alt="" />
+              <div>temperature</div>
+              <div>date</div>
             </li>
-            <li class="list-group-item dayprecipitation">
-              ☔ No risk of precipitation
-            </li>
-            <li class="list-group-item daywind">🍃Wind: 14km/h</li>
+            <li class="list-group-item cardstyle">A second item</li>
+            <li class="list-group-item cardstyle">A third item</li>
           </ul>
         </div>
         <div class="card" style="width: 18rem">
-          <div class="card-body itemgroup">
-            <h5 class="card-title daytemperature">20°</h5>
-            <div>
-              <img src="images/cloudy (1).png" alt="" />
-            </div>
-            <p class="card-text daydate">Date</p>
-          </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item backgroundcolorcontainer">
-              Cloudy most of the day
+            <li class="list-group-item cardstyle">
+              <img src="images/cloudy.png" alt="" />
+              <div>temperature</div>
+              <div>date</div>
             </li>
-            <li class="list-group-item dayprecipitation">
-              ☔ Precipitation: 40%
-            </li>
-            <li class="list-group-item daywind">🍃Wind: 14km/h</li>
+            <li class="list-group-item cardstyle">A second item</li>
+            <li class="list-group-item cardstyle">A third item</li>
           </ul>
         </div>
         <div class="card" style="width: 18rem">
-          <div class="card-body itemgroup">
-            <h5 class="card-title daytemperature">-10°</h5>
-            <div>
-              <img src="images/sun (1).png" alt="" />
-            </div>
-            <p class="card-text daydate">Date</p>
-          </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item backgroundcolorcontainer">
-              Cloudy most of the day
+            <li class="list-group-item cardstyle">
+              <img src="images/cloudy.png" alt="" />
+              <div>temperature</div>
+              <div>date</div>
             </li>
-            <li class="list-group-item dayprecipitation">
-              ☔No risk of precipitation
-            </li>
-            <li class="list-group-item daywind">🍃Wind: 14km/h</li>
+            <li class="list-group-item cardstyle">A second item</li>
+            <li class="list-group-item cardstyle">A third item</li>
           </ul>
         </div>
         <div class="card" style="width: 18rem">
-          <div class="card-body itemgroup">
-            <h5 class="card-title daytemperature">33</h5>
-            <div>
-              <img src="images/cloudy (2).png" alt="" />
-            </div>
-            <p class="card-text daydate">Date</p>
-          </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item backgroundcolorcontainer">
-              Cloudy most of the day
+            <li class="list-group-item cardstyle">
+              <img src="images/cloudy.png" alt="" />
+              <div>temperature</div>
+              <div>date</div>
             </li>
-            <li class="list-group-item dayprecipitation">
-              ☔No risk of precipitation
-            </li>
-            <li class="list-group-item daywind">🍃Wind: 14km/h</li>
+            <li class="list-group-item cardstyle">A second item</li>
+            <li class="list-group-item cardstyle">A third item</li>
           </ul>
         </div>
       </div>
-      <small
+      <small class="cardstyle"
         ><a href="https://github.com/ivs-silva/SheCodesPlus" target="_blank"
           >Open-Source Code</a
         >
@@ -214,6 +154,6 @@
       </small>
     </div>
   </body>
-  */
+
   <script src="src/index.js"></script>
 </html>

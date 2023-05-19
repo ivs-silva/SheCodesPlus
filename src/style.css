@@ -1,89 +1,84 @@
-h1 {
-  color: #20016d;
-  font-family: "Xanh Mono", monospace;
-  font-size: 37px;
-  text-align: right;
-}
-
-h2 {
-  color: #20016d;
-  font-family: "Xanh Mono", monospace;
-  font-size: 35px;
-  text-align: left;
-}
-
-p {
-  color: black;
-  font-family: "Xanh Mono", monospace;
-  font-size: 15px;
-  text-align: left;
-}
-
 img {
   width: 50px;
   display: block;
   margin: auto;
 }
 
-.currentdaytemperature {
-  color: #20016d;
-  font-family: "Xanh Mono", monospace;
-  font-size: 35px;
-  text-align: center;
-}
-.imageheader {
-  width: 90px;
+.imagesize {
+  width: 150px;
+  align-self: left;
   display: block;
   margin: auto;
 }
-.firstcontainer {
-  border-radius: 20px;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(239, 246, 249) 0%,
-    rgb(206, 239, 253) 90%
-  );
-  font-family: "Playfair Display", monospace;
-}
-.backgroundcontainer {
-  font-family: "Playfair Display", monospace;
-}
-.card,
-.itemgroup {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(239, 246, 249) 0%,
-    rgb(206, 239, 253) 90%
-  );
-  font-family: "Playfair Display", serif;
+
+.maincontainer {
+  padding: 30px 100px 20px;
+  max-width: 50%;
 }
 
-.backgroundcolorcontainer {
-  background-color: transparent;
-  text-align: center;
+.containerleft {
+  max-width: 45%;
 }
 
-.daytemperature {
-  font-family: "Playfair Display", serif;
-  text-align: center;
-  font-size: 25px;
-  background-color: transparent;
+.containerright {
+  max-width: 45%;
 }
-.daydate {
-  font-family: "Playfair Display", serif;
-  text-align: center;
+
+.searchcontainer {
+  margin: 2% 0;
+}
+
+.cityname {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
   font-size: 20px;
-  background-color: transparent;
+  text-align: center;
+}
+.standardstyleleft {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 17px;
+  text-align: left;
 }
 
-.daywind {
-  font-family: "Playfair Display", serif;
-  text-align: center;
-  background-color: transparent;
+.standardstyleright {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 15px;
+  text-align: right;
 }
 
-.dayprecipitation {
-  font-family: "Playfair Display", serif;
+.leftstyledescription {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 13px;
+  text-align: left;
+}
+.rightstyledescription {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 13px;
+  text-align: right;
+}
+
+.styleformbutton {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cardstyle {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 14px;
   text-align: center;
-  background-color: transparent;
+}
+
+.currenttemperaturestyle {
+  color: #20016d;
+  font-family: "Abyssinica SIL", monospace;
+  font-size: 50px;
+  text-align: left;
+  font-weight: bold;
 }
