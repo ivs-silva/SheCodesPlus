@@ -12,16 +12,19 @@ img {
 }
 
 .maincontainer {
-  padding: 30px 100px 20px;
+  padding: initial;
   max-width: 50%;
 }
 
+.row {
+  margin: auto;
+}
 .containerleft {
-  max-width: 45%;
+  max-width: 55%;
 }
 
 .containerright {
-  max-width: 45%;
+  max-width: 55%;
 }
 
 .searchcontainer {
@@ -46,6 +49,7 @@ img {
   font-family: "Abyssinica SIL", monospace;
   font-size: 15px;
   text-align: right;
+  margin: 1% 0;
 }
 
 .leftstyledescription {
@@ -81,4 +85,8 @@ img {
   font-size: 50px;
   text-align: left;
   font-weight: bold;
+}
+
+.list-group-item {
+  padding: 1% 0;
 }
