@@ -47,6 +47,36 @@ function DisplayCurrentCity(event) {
 let button = document.querySelector("#form-city");
 button.addEventListener("submit", DisplayCurrentCity);
 
+function getForecast(coordinates) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  console.log(url);
+  axios.get(url).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let searchedCityTemp = document.querySelector("#first-following-day");
+  let searchedCityTempSecondDay = document.querySelector(
+    "#second-following-day"
+  );
+  let searchedCityTempThirdDay = document.querySelector("#third-following-day");
+  let searchedCityTempFourthDay = document.querySelector(
+    "#fourth-following-day"
+  );
+  let searchedCityTempFifthDay = document.querySelector("#fifth-following-day");
+
+  let temperature = Math.round(response.data.daily[1].temp.day);
+  let temperatureSecondDay = Math.round(response.data.daily[2].temp.day);
+  let temperatureThirdDay = Math.round(response.data.daily[3].temp.day);
+  let temperatureFourthDay = Math.round(response.data.daily[4].temp.day);
+  let temperatureFifthDay = Math.round(response.data.daily[5].temp.day);
+  searchedCityTemp.innerHTML = `${temperature}°`;
+  searchedCityTempSecondDay.innerHTML = `${temperatureSecondDay}°`;
+  searchedCityTempThirdDay.innerHTML = `${temperatureThirdDay}°`;
+  searchedCityTempFourthDay.innerHTML = `${temperatureFourthDay}°`;
+  searchedCityTempFifthDay.innerHTML = `${temperatureFifthDay}°`;
+}
+
 function showWeather(response) {
   let currentPositionTemperature = document.querySelector("#temperature");
   let temperature = Math.round(response.data.main.temp);
@@ -66,6 +96,8 @@ function showWeather(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function retrievePosition(position) {
