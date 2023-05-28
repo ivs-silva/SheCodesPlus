@@ -81,6 +81,8 @@ navigator.geolocation.getCurrentPosition(retrievePosition);
 function ConverttoFahrenheit(event) {
   event.preventDefault();
   let temperatureCelsius = document.querySelector("#temperature");
+  celsiusbutton.classList.remove("active-link");
+  fahrenheitbutton.classList.add("active-link");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 
   temperatureCelsius.innerHTML = Math.round(fahrenheitTemperature);
@@ -88,8 +90,9 @@ function ConverttoFahrenheit(event) {
 
 function ConverttoCelsius(event) {
   event.preventDefault();
+  celsiusbutton.classList.add("active-link");
+  fahrenheitbutton.classList.remove("active-link");
   let temperatureFahrenheit = document.querySelector("#temperature");
-
   temperatureFahrenheit.innerHTML = Math.round(celsiusTemperature);
 }
 

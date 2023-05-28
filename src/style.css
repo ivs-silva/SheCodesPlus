@@ -90,3 +90,13 @@ img {
 .list-group-item {
   padding: 1% 0;
 }
+
+.standardstyleright .active-link {
+  color: #20016d;
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+}
+.standardstyleright .active-link:hover {
+  text-decoration: none;
+}
