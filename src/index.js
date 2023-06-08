@@ -65,16 +65,72 @@ function displayForecast(response) {
   );
   let searchedCityTempFifthDay = document.querySelector("#fifth-following-day");
 
+  let minTempFollowingDay = document.querySelector(
+    "#min-temp-first-following-day"
+  );
+  let minTempSecondFollowingDay = document.querySelector(
+    "#min-temp-second-following-day"
+  );
+  let minTempThirdFollowingDay = document.querySelector(
+    "#min-temp-third-following-day"
+  );
+  let minTempFourthFollowingDay = document.querySelector(
+    "#min-temp-fourth-following-day"
+  );
+  let minTempFifthFollowingDay = document.querySelector(
+    "#min-temp-fifth-following-day"
+  );
+
+  let firstIcon = document.querySelector("#first-icon");
+  let secondIcon = document.querySelector("#second-icon");
+  let thirdIcon = document.querySelector("#third-icon");
+  let fourthIcon = document.querySelector("#fourth-icon");
+  let fifthIcon = document.querySelector("#fifth-icon");
+
   let temperature = Math.round(response.data.daily[1].temp.day);
   let temperatureSecondDay = Math.round(response.data.daily[2].temp.day);
   let temperatureThirdDay = Math.round(response.data.daily[3].temp.day);
   let temperatureFourthDay = Math.round(response.data.daily[4].temp.day);
   let temperatureFifthDay = Math.round(response.data.daily[5].temp.day);
-  searchedCityTemp.innerHTML = `${temperature}°`;
-  searchedCityTempSecondDay.innerHTML = `${temperatureSecondDay}°`;
-  searchedCityTempThirdDay.innerHTML = `${temperatureThirdDay}°`;
-  searchedCityTempFourthDay.innerHTML = `${temperatureFourthDay}°`;
-  searchedCityTempFifthDay.innerHTML = `${temperatureFifthDay}°`;
+
+  let minTemp = Math.round(response.data.daily[1].temp.min);
+  let minTempSecondDay = Math.round(response.data.daily[2].temp.min);
+  let mintempThirdDay = Math.round(response.data.daily[3].temp.min);
+  let minTempFourthDay = Math.round(response.data.daily[4].temp.min);
+  let minTempFifthDay = Math.round(response.data.daily[5].temp.min);
+
+  searchedCityTemp.innerHTML = `${temperature}° / `;
+  searchedCityTempSecondDay.innerHTML = `${temperatureSecondDay}° / `;
+  searchedCityTempThirdDay.innerHTML = `${temperatureThirdDay}° / `;
+  searchedCityTempFourthDay.innerHTML = `${temperatureFourthDay}° / `;
+  searchedCityTempFifthDay.innerHTML = `${temperatureFifthDay}° / `;
+  minTempFollowingDay.innerHTML = `${minTemp}°`;
+  minTempSecondFollowingDay.innerHTML = `${minTempSecondDay}°`;
+  minTempThirdFollowingDay.innerHTML = `${mintempThirdDay}°`;
+  minTempFourthFollowingDay.innerHTML = `${minTempFourthDay}°`;
+  minTempFifthFollowingDay.innerHTML = `${minTempFifthDay}°`;
+
+  firstIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.daily[1].weather[0].icon}@2x.png`
+  );
+
+  secondIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.daily[2].weather[0].icon}@2x.png`
+  );
+  thirdIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.daily[3].weather[0].icon}@2x.png`
+  );
+  fourthIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.daily[4].weather[0].icon}@2x.png`
+  );
+  fifthIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.daily[5].weather[0].icon}@2x.png`
+  );
 }
 
 function showWeather(response) {
