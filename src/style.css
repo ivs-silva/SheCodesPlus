@@ -10,17 +10,21 @@ img {
   display: block;
   margin: 0px 0px 0px 0px;
 }
-
+.background {
+  background-color: honeydew;
+}
 .maincontainer {
   padding: initial;
   max-width: 600px;
   margin: 30px auto;
   border: 1px solid #dadde1;
   border-radius: 10px;
+  background-color: transparent;
 }
 
 .row {
   margin: auto;
+  background-color: transparent;
 }
 .containerleft {
   max-width: 55%;
@@ -32,6 +36,7 @@ img {
 
 .searchcontainer {
   margin: 2% 0;
+  background-color: transparent;
 }
 
 .cityname {
@@ -72,6 +77,7 @@ img {
   font-family: "Abyssinica SIL", monospace;
   font-size: 14px;
   text-align: left;
+  background-color: transparent;
 }
 
 .cardstyle {
@@ -79,8 +85,13 @@ img {
   font-family: "Abyssinica SIL", monospace;
   font-size: 14px;
   text-align: center;
+  background-color: transparent;
 }
-
+.card,
+li,
+ul {
+  background-color: transparent;
+}
 .currenttemperaturestyle {
   color: #20016d;
   font-family: "Abyssinica SIL", monospace;
@@ -93,6 +104,7 @@ img {
   padding: 1% 0;
   border: none;
   margin: 0px 0px 0px 0px;
+  background-color: transparent;
 }
 
 .standardstyleright .active-link {
@@ -103,4 +115,7 @@ img {
 }
 .standardstyleright .active-link:hover {
   text-decoration: none;
+}
+.list-group-flush {
+  background-color: transparent;
 }
