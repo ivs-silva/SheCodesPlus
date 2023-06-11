@@ -51,17 +51,15 @@ function displayForecast(response) {
         forecastHTML +
         `    <div class="card" style="width: 8rem">
         <ul class="list-group list-group-flush">
-             <li class="list-group-item cardstyle" id="wether-following-day">${formatForecastDay(
+             <li class="list-group-item cardstyle">${formatForecastDay(
                forecastDay.time
              )}</li>
             <li class="list-group-item cardstyle">
-              <img id="weather-icon" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
                 forecastDay.condition.icon
               }.png" alt="${forecastDay.condition.description}" />
-              <span id="weather-following-day">${Math.round(
-                forecastDay.temperature.maximum
-              )}° / </span>
-              <span id="min-temp-weather-following-day"> ${Math.round(
+              <span>${Math.round(forecastDay.temperature.maximum)}° / </span>
+              <span class="minTemperature"> ${Math.round(
                 forecastDay.temperature.minimum
               )}°</span>
             </li>
@@ -120,13 +118,9 @@ function showWeather(response) {
 
 function retrievePosition(position) {
   let apiKey = "734273ccf9a2ecd1e07fb3c5t7o319bd";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
+  let url = `https://api.shecodes.io/weather/v1/current?query=${position}&key=${apiKey}`;
   axios.get(url).then(showWeather);
 }
-
-navigator.geolocation.getCurrentPosition(retrievePosition);
 
 function ConverttoFahrenheit(event) {
   event.preventDefault();
@@ -153,3 +147,5 @@ fahrenheitbutton.addEventListener("click", ConverttoFahrenheit);
 
 let celsiusbutton = document.querySelector("#celsius-link");
 celsiusbutton.addEventListener("click", ConverttoCelsius);
+
+retrievePosition("Vienna");

@@ -119,3 +119,7 @@ ul {
 .list-group-flush {
   background-color: transparent;
 }
+
+.minTemperature {
+  color: darkgray;
+}
